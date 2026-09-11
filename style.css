@@ -1,0 +1,261 @@
+/* =========================================
+   Bootcamp for Science
+   Main Stylesheet
+   ========================================= */
+
+
+/* ---------- Typography ---------- */
+
+:root {
+    /* Fonts */
+    --font-heading: "Source Serif 4", Georgia, serif;
+    --font-body: "Source Serif 4", Georgia, serif;
+    --font-ui: "Inter", Arial, sans-serif;
+
+    /* Font sizes */
+    --text-small: 0.9rem;
+    --text-normal: 1rem;
+    --text-large: 1.25rem;
+
+    --heading-small: 1.75rem;
+    --heading-medium: 2.5rem;
+    --heading-large: 3.5rem;
+
+    /* Colors */
+    --text-color: #161616;
+    --muted-text: #555;
+    --background: #ffffff;
+
+    /* Your old site's burgundy accent */
+    --accent: #9e1748;
+}
+
+
+/* ---------- Basic page ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: var(--font-body);
+    font-size: var(--text-normal);
+    line-height: 1.6;
+
+    color: var(--text-color);
+    background-color: var(--background);
+}
+
+
+/* ---------- Headings ---------- */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+}
+
+h1 {
+    font-size: var(--heading-large);
+}
+
+h2 {
+    font-size: var(--heading-medium);
+}
+
+h3 {
+    font-size: var(--heading-small);
+}
+
+
+/* ---------- Navigation ---------- */
+
+header {
+    border-top: 5px solid var(--accent);
+    background-color: #fafafa;
+}
+
+nav {
+    max-width: 1200px;
+    height: 80px;
+
+    margin: auto;
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: var(--font-ui);
+    font-size: 1.4rem;
+    font-weight: 650;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    font-family: var(--font-ui);
+    font-size: 1rem;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+
+/* ---------- Dropdown ---------- */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-button {
+    padding: 25px 0;
+
+    background: none;
+    border: none;
+
+    font-family: var(--font-ui);
+    font-size: 1rem;
+
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+
+    position: absolute;
+    top: 65px;
+    right: 0;
+
+    width: 250px;
+    padding: 8px 0;
+
+    background: white;
+
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 20px;
+
+    font-family: var(--font-ui);
+    line-height: 1.4;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f5f5f5;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+
+
+/* ---------- Main content ---------- */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 30px;
+}
+
+
+/* ---------- Homepage hero ---------- */
+
+.hero {
+    min-height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.hero h1 {
+    margin: 0 0 25px;
+
+    font-family: var(--font-heading);
+    font-size: var(--heading-large);
+    font-weight: 500;
+}
+
+.hero p {
+    margin: 0 0 30px;
+
+    font-family: var(--font-heading);
+    font-size: var(--text-large);
+
+    color: var(--muted-text);
+}
+
+
+/* ---------- Buttons ---------- */
+
+.button {
+    display: inline-block;
+
+    padding: 13px 24px;
+
+    background-color: #161616;
+    color: white;
+
+    font-family: var(--font-ui);
+    font-size: 0.95rem;
+
+    text-decoration: none;
+    border-radius: 5px;
+
+    transition: background-color 0.2s ease;
+}
+
+.button:hover {
+    background-color: #3a3a3a;
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 700px) {
+
+    nav {
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .hero {
+        min-height: 420px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+}
