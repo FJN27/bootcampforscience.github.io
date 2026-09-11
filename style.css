@@ -170,7 +170,7 @@ nav {
 /* ---------- Main content ---------- */
 
 main {
-    max-width: 1200px;
+    max-width: 800px;
     margin: auto;
     padding: 0 30px;
 }
@@ -258,4 +258,54 @@ main {
     .hero p {
         font-size: 1.1rem;
     }
+}
+
+/* =========================================
+   Tables
+   ========================================= */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin: 30px 0 50px;
+}
+
+.gre-topics {
+    width: 100%;
+    border-collapse: collapse;
+
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+}
+
+.gre-topics th,
+.gre-topics td {
+    border: 1px solid #d0d0d0;
+    padding: 22px 25px;
+    vertical-align: top;
+}
+
+.gre-topics th {
+    background-color: #f3f3f3;
+    font-weight: 500;
+    text-align: center;
+}
+
+.gre-topics th:first-child,
+.gre-topics td:first-child {
+    width: 32%;
+}
+
+.gre-topics td:first-child {
+    text-align: center;
+    font-weight: 500;
+}
+
+.gre-topics ul {
+    margin: 0;
+    padding-left: 25px;
+}
+
+.gre-topics li {
+    margin: 5px 0;
 }
