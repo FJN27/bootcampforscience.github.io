@@ -4,20 +4,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Bootcamp for Science</title>
+
+    <style>
+        /* Remove the browser's default spacing */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            color: #111;
+            background-color: white;
+        }
+
+        /* ---------- Navigation ---------- */
+
+        header {
+            border-top: 5px solid #9e1748;
+            background-color: #fafafa;
+        }
+
+        nav {
+            max-width: 1200px;
+            height: 80px;
+            margin: auto;
+            padding: 0 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+
+            font-family: Georgia, serif;
+            font-size: 20px;
+        }
+
+        .nav-links a {
+            color: #111;
+            text-decoration: none;
+        }
+
+        /* ---------- Dropdown ---------- */
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-button {
+            background: none;
+            border: none;
+            font-family: Georgia, serif;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 25px 0;
+        }
+
+        .dropdown-menu {
+            display: none;
+
+            position: absolute;
+            top: 65px;
+            right: 0;
+
+            width: 240px;
+            padding: 10px 0;
+
+            background: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 13px 20px;
+            line-height: 1.4;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #f5f5f5;
+        }
+
+        /* Show dropdown when mouse is over Physics */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* ---------- Main homepage ---------- */
+
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 30px;
+        }
+
+        .hero {
+            min-height: 500px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: 52px;
+            font-weight: normal;
+            margin: 0 0 35px;
+        }
+
+        .hero p {
+            font-family: Georgia, serif;
+            font-size: 22px;
+            margin: 0 0 30px;
+        }
+
+        .about-button {
+            display: inline-block;
+
+            padding: 16px 25px;
+
+            background-color: #111;
+            color: white;
+
+            font-family: Georgia, serif;
+            font-size: 18px;
+
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .about-button:hover {
+            background-color: #333;
+        }
+
+        /* ---------- Mobile ---------- */
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 0 20px;
+            }
+
+            .logo {
+                font-size: 19px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                font-size: 17px;
+            }
+
+            .dropdown-button {
+                font-size: 17px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 19px;
+            }
+        }
+
+    </style>
 </head>
+
 
 <body>
 
-    <h1>Bootcamp for Science</h1>
+    <!-- Navigation bar -->
+    <header>
 
-    <p>Welcome to Bootcamp for Science!</p>
+        <nav>
 
-    <h2>Physics</h2>
+            <div class="logo">
+                Bootcamp for Science
+            </div>
 
-    <p>
-        Learn physics through notes, explanations, and practice problems.
-    </p>
+            <div class="nav-links">
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <div class="dropdown">
+
+                    <button class="dropdown-button">
+                        Physics ▾
+                    </button>
+
+                    <div class="dropdown-menu">
+
+                        <a href="software.html">
+                            Software Recommendation
+                        </a>
+
+                        <a href="numerical-methods.html">
+                            Numerical Methods for Physics
+                        </a>
+
+                        <a href="gre-physics.html">
+                            GRE Physics
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Main content -->
+    <main>
+
+        <section class="hero">
+
+            <h1>
+                Bootcamp for Science
+            </h1>
+
+            <p>
+                Math, Physics, and Chemistry
+            </p>
+
+            <a class="about-button" href="about.html">
+                About us
+            </a>
+
+        </section>
+
+    </main>
 
 </body>
 
